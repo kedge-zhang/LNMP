@@ -86,7 +86,7 @@ mysqld [--defaults-file=/etc/my.cnf] [--user=mysql] [--pid-file=/var/lib/mysql/3
 ./mysqld_safe --defaults-file=/data/mysql3307/etc/my.cnf --user=mysql &
 客户端连接:mysql --defaults-file=/data/mysql3307/etc/my.cnf
             or
-		     	mysql -S /var/run/mysql.sock
+	  mysql -S /var/run/mysql.sock
 ```
 ### 7.2shutdown
 ```
