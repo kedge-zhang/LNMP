@@ -39,7 +39,8 @@ useradd -s /sbin/nologin -M mysql
 -DEXTRA_CHARSETS=all \
 -DDEFAULT_CHARSET=utf8 \
 -DDEFAULT_COLLATION=utf8_general_ci \
--DMYSQL_USER=mysql
+-DMYSQL_USER=mysql \
+-DWITH_MYISAM_STORAGE_ENGINE=1
 
 4.make && make install
 ```
@@ -72,9 +73,23 @@ chkconfig   mysqld on
 1.设置密码
 # /usr/local/mysql/bin/mysql_secure_installation
 
-2.修=修改密码
+2.修改密码
 # use mysql;
 # select user,host,password from user;
 # update user set password=password('这里是密码') where  user='root';
 # flush privileges;
 ```
+## 7.start || shutdown
+### 7.1start
+```
+mysqld [--defaults-file=/etc/my.cnf] [--user=mysql] [--pid-file=/var/lib/mysql/3306.pid] &
+./mysqld_safe --defaults-file=/data/mysql3307/etc/my.cnf --user=mysql &
+客户端连接:mysql --defaults-file=/data/mysql3307/etc/my.cnf
+            or
+		     	mysql -S /var/run/mysql.sock
+```
+### 7.2shutdown
+```
+mysqladmin -uroot -pxxx shutdown -S /var/run/mysql.sock
+```
+
