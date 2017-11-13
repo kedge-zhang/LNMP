@@ -78,7 +78,7 @@ esac
 function conf_nginx(){
 cd /etc/nginx && rm -rf nginx.conf && mkdir -p  /data/web
 cat > nginx.conf <<EOF
-user  nginx nginx;
+user  www www;
  worker_processes  auto;
  error_log  logs/error.log error;
  
