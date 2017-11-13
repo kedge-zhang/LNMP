@@ -6,6 +6,7 @@
 yum install gcc gcc-c++  libxml2 libxml2-devel curl  curl-devel libwebp.x86_64  libwebp-devel.x86_64 libwebp-tools.x86_64 libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel libxslt  libxslt-devel -y net-snmp net-snmp-devel bzip2-devel libmcrypt libmcrypt-devel readline readline-devel
 ##获取PHP
 wget http://cn2.php.net/get/php-7.1.3.tar.gz/from/this/mirror
+wget http://cn2.php.net/get/php-5.6.32.tar.gz/from/this/mirror
 tar zxvf php-7.1.3.tar.gz && 不错cd php-7.1.10
 ```
 
