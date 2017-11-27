@@ -1,6 +1,4 @@
-echo "# LNMP" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/kedge-zhang/Lnmp.git
-git push -u origin master
+Beanch:
+  Nginx
+  PHP
+  DataBase
