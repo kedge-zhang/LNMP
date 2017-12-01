@@ -104,7 +104,7 @@ PHP对应的Web Server模式，Module、fastcgi、fpm只需要一种即可，服
 #### 2.2.2 模块编译
 ```
 ./configure --prefix=/usr/local/php7 \
- --with-config-file-path=/usr/local/php/etc \
+ --with-config-file-path=/usr/local/php7/etc \
  --enable-inline-optimization \
  --disable-debug \
  --disable-rpath \
