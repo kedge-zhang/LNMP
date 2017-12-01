@@ -26,10 +26,10 @@ fi
 #
 ##check user
 function check_user() {
-gflag= `cat /etc/group | grep www`
-[ -n "$gflag" ] && echo "group 'www' already exists"  || groupadd www
+gflag= `cat /etc/group | grep nginx`
+[ -n "$gflag" ] && echo "group 'nginx' already exists"  || groupadd nginx
 uflag=`cat  /etc/passwd  | grep nginx`
-[ -n "$uflag" ] && echo "user 'www' already exists" ||  useradd -r www -g www -s /sbin/nologin
+[ -n "$uflag" ] && echo "user 'nginx' already exists" ||  useradd -r nginx -g nginx -s /sbin/nologin
 }
 #
 ##Install devel
@@ -68,7 +68,7 @@ case $version in
 2)tar fvx nginx-1.13.2.tar.gz && cd ${downloaddir}/nginx-1.13.2 && ./configure --prefix=/usr/local/nginx --sbin-path=/usr/local/nginx/sbin/nginx  --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log  --http-log-path=/var/log/nginx/access.log --pid-path=/var/run/nginx/nginx.pid --lock-path=/var/lock/nginx.lock --user=nginx --group=nginx --error-log-path=/usr/local/nginx/logs/error.log --http-log-path=/usr/local/nginx/logs/access.log  --with-pcre --with-http_ssl_module --with-http_stub_status_module --with-http_gzip_static_module  --without-http_auth_basic_module --without-http_autoindex_module --without-http_browser_module --without-http_empty_gif_module --without-http_geo_module --without-http_limit_conn_module --without-http_limit_req_module --without-http_map_module --without-http_memcached_module --without-http_referer_module --without-http_scgi_module --without-http_split_clients_module --without-http_ssi_module --without-http_upstream_ip_hash_module --without-http_upstream_keepalive_module --without-http_upstream_least_conn_module --without-http_userid_module --without-http_uwsgi_module --without-mail_imap_module --without-mail_pop3_module --without-mail_smtp_module --without-poll_module --without-select_module --http-proxy-temp-path=/var/tmp/nginx/proxy --with-cc-opt='-O2' >/dev/null && make -j$cpunum>/dev/null && make install >/dev/null     
 [ $? -eq 0 ]  && echo "nginx  install  compleate,go next step." || echo "nginx install failed ,please check"
 ;;
-*)tar zxf tengine-2.2.0.tar.gz   && cd ${downloaddir}/tengine-2.2.0 && ./configure --prefix=/usr/local/nginx --sbin-path=/usr/local/nginx/sbin/nginx  --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log  --http-log-path=/var/log/nginx/access.log --pid-path=/var/run/nginx/nginx.pid --lock-path=/var/lock/nginx.lock --user=www --group=www --error-log-path=/usr/local/nginx/logs/error.log --http-log-path=/usr/local/nginx/logs/access.log --with-pcre --with-http_ssl_module --with-http_stub_status_module --with-http_gzip_static_module  --without-http_auth_basic_module --without-http_autoindex_module --without-http_browser_module --without-http_empty_gif_module --without-http_geo_module --without-http_limit_conn_module --without-http_limit_req_module --without-http_map_module --without-http_memcached_module --without-http_referer_module --without-http_scgi_module --without-http_split_clients_module --without-http_ssi_module --without-http_upstream_ip_hash_module --without-http_upstream_keepalive_module --without-http_upstream_least_conn_module --without-http_userid_module --without-http_uwsgi_module --without-mail_imap_module --without-mail_pop3_module --without-mail_smtp_module --without-poll_module --without-select_module --http-proxy-temp-path=/var/tmp/nginx/proxy --with-cc-opt='-O2' >/dev/null && make -j$cpunum>/dev/null && make install >/dev/null 
+*)tar zxf tengine-2.2.0.tar.gz   && cd ${downloaddir}/tengine-2.2.0 && ./configure --prefix=/usr/local/nginx --sbin-path=/usr/local/nginx/sbin/nginx  --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log  --http-log-path=/var/log/nginx/access.log --pid-path=/var/run/nginx/nginx.pid --lock-path=/var/lock/nginx.lock --user=nginx --group=nginx --error-log-path=/usr/local/nginx/logs/error.log --http-log-path=/usr/local/nginx/logs/access.log --with-pcre --with-http_ssl_module --with-http_stub_status_module --with-http_gzip_static_module  --without-http_auth_basic_module --without-http_autoindex_module --without-http_browser_module --without-http_empty_gif_module --without-http_geo_module --without-http_limit_conn_module --without-http_limit_req_module --without-http_map_module --without-http_memcached_module --without-http_referer_module --without-http_scgi_module --without-http_split_clients_module --without-http_ssi_module --without-http_upstream_ip_hash_module --without-http_upstream_keepalive_module --without-http_upstream_least_conn_module --without-http_userid_module --without-http_uwsgi_module --without-mail_imap_module --without-mail_pop3_module --without-mail_smtp_module --without-poll_module --without-select_module --http-proxy-temp-path=/var/tmp/nginx/proxy --with-cc-opt='-O2' >/dev/null && make -j$cpunum>/dev/null && make install >/dev/null 
 [ $? -eq 0 ]  && echo "tengine  install  compleate,go next step." || echo "tengine install failed ,please check" 
 ;;
 esac
@@ -78,7 +78,7 @@ esac
 function conf_nginx(){
 cd /etc/nginx && rm -rf nginx.conf && mkdir -p  /data/web
 cat > nginx.conf <<EOF
-user  www www;
+user  nginx nginx;
  worker_processes  auto;
  error_log  logs/error.log error;
  
