@@ -146,11 +146,11 @@ source /root/.bash_profile
   }  
 
 function main() {
-#version
-#check_root
-#check_mysql
-#download_database
-#install_databases
+version
+check_root
+check_mysql
+download_database
+install_databases
 mkdir_chown
 touch_cnf
 initialize_databases
