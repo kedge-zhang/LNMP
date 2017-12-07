@@ -86,6 +86,7 @@ case $version in
   ;;
 *)
 echo "傻逼，去你妈滴！"
+exit 3
   ;;
 esac
   }
