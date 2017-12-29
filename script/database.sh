@@ -68,7 +68,7 @@ case $version in
 
 "2")
   yum -y install gcc gcc-c++  make cmake automake  autoconf libxml2 libxml2-devel zlib zlib-devel ncurses ncurses-devel readline-devel
-  if [ -f ${package_path}/${install_mname} ];then
+  if [ -f ${package_path}/${install_pname} ];then
     echo "$install_pname 存在" > /dev/null 2>&1
     cd $package_path && tar fx ${install_pname} &&  cd $pname
   else
