@@ -145,6 +145,7 @@ PHP对应的Web Server模式，Module、fastcgi、fpm只需要一种即可，服
  --with-pcre-dir \
  --enable-ftp \
  --with-readline
+ --enable-mysqlnd-compression-support
 ```
 ## 2.3 后续配置
 ```
