@@ -113,13 +113,12 @@ PHP对应的Web Server模式，Module、fastcgi、fpm只需要一种即可，服
  --enable-fpm \
  --with-fpm-user=www \
  --with-fpm-group=www \
- --with-mysqli=mysqlnd \
- --with-pdo-mysql=mysqlnd \
+ --with-pdo-mysql \
+ --with-pdo-sqlite \
  --with-pdo-sqlite \
  --with-gettext \
  -enable-mbstring \
- --with-iconv \
- --with-mcrypt \
+ --with-iconv-dir \
  --with-mhash \
  --with-openssl \
  --with-jpeg-dir \
@@ -128,23 +127,27 @@ PHP对应的Web Server模式，Module、fastcgi、fpm只需要一种即可，服
  --with-libxml-dir \
  --with-xmlrpc \
  --with-gd \
- --enable-bcmath \
- --enable-soap \
  --with-libxml-dir \
- --enable-pcntl \
- --enable-shmop \
- -enable-sysvmsg \
- -enable-sysvsem \
- --enable-sysvshm \
- --enable-sockets \
  --with-curl \
  --with-zlib \
- -enable-zip \
  --with-bz2 \
  --with-pear \
  --with-pcre-dir \
+ --enable-mbregex \
+ --enable-mbstring \
+ --enable-bcmath \
+ --enable-soap \
+ --enable-pcntl \
+ --enable-shmop \
+ --enable-sysvmsg \
+ --enable-sysvsem \
+ --enable-sysvshm \
+ --enable-sockets \
+ --enable-mysqlnd \
+ --enable-xml \
+ --enable-zip \
  --enable-ftp \
- --with-readline
+ --with-readline \
  --enable-mysqlnd-compression-support
 ```
 ## 2.3 后续配置
