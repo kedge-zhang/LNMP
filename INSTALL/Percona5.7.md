@@ -40,7 +40,7 @@ yum install  zlib zlib-devel openssl openssl-devel readline-devel gcc gcc-c++ ma
 -DWITH_EDITLINE=bundled  \
 -DMYSQL_TCP_PORT=3306 \
 -DEFAULT_CHARSET=utf8mb4 \
--DDEFAULT_COLLATION=utf8mb4_general_ci \
+-DEFAULT_COLLATION=utf8mb4_general_ci \
 -DENABLED_LOCAL_INFILE=1 \
 -DEXTRA_CHARSETS=all \
 -DMYSQL_USER=mysql \
