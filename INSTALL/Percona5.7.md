@@ -43,7 +43,12 @@ yum install  zlib zlib-devel readline-devel git gcc gcc-c++ make cmake bison bis
 -DDEFAULT_COLLATION=utf8mb4_general_ci \
 -DENABLED_LOCAL_INFILE=1 \
 -DEXTRA_CHARSETS=all \
--DMYSQL_USER=mysql
+-DMYSQL_USER=mysql \
+-DWITH_SAFEMALLOC=OFF \
+-DWITH_DEBUG=0 \  
+-DENABLE_PROFILING=1 \
+-DWITH_SSL=system \
+-DWITH_ZLIB=system
 ```
 
 * ./bin/mysqld --initialize-insecure --user=mysql --basedir=/usr/local/Percona5.7 --datadir=/data/mysql/data --innodb_undo_tablespaces=3
