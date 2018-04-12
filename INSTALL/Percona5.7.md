@@ -51,4 +51,5 @@ yum install  zlib zlib-devel openssl openssl-devel readline-devel gcc gcc-c++ ma
 ```
 
 * ./bin/mysqld --initialize-insecure --user=mysql --basedir=/usr/local/Percona5.7 --datadir=/data/mysql/data --innodb_undo_tablespaces=3
+* ./bin/mysql_ssl_rsa_setup --user=mysql  --basedir=/usr/local/Percona5.7 --datadir=/data/mysql/data
 * cp support-files/mysql.server /etc/init.d/mysqld
