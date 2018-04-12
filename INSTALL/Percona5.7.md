@@ -21,7 +21,7 @@ wget https://sourceforge.net/projects/boost/files/boost/1.59.0/boost_1_59_0.tar.
 
 ## 3.依赖
 ```
-yum install  zlib zlib-devel openssl openssl-devel readline-devel git gcc gcc-c++ make cmake bison bison-devel ncurses-devel libaio-devel perl -y
+yum install  zlib zlib-devel openssl openssl-devel readline-devel gcc gcc-c++ make cmake bison bison-devel ncurses-devel libaio-devel perl -y
 ```
 ## 4.编译
 
@@ -46,6 +46,7 @@ yum install  zlib zlib-devel openssl openssl-devel readline-devel git gcc gcc-c+
 -DMYSQL_USER=mysql \
 -DWITH_SAFEMALLOC=OFF \
 -DWITH_DEBUG=0 \
+-DENABLE_PROFILING=1 \
 -DWITH_SSL=system \
 -DWITH_ZLIB=system
 ```
