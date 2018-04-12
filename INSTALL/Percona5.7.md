@@ -46,7 +46,6 @@ yum install  zlib zlib-devel openssl openssl-devel readline-devel git gcc gcc-c+
 -DMYSQL_USER=mysql \
 -DWITH_SAFEMALLOC=OFF \
 -DWITH_DEBUG=0 \
--DENABLE_PROFILING=1 \
 -DWITH_SSL=system \
 -DWITH_ZLIB=system
 ```
