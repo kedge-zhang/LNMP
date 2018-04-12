@@ -33,6 +33,7 @@ yum install  zlib zlib-devel openssl openssl-devel readline-devel gcc gcc-c++ ma
 -DMYSQL_DATADIR=/data/mysql/data \
 -DWITH_BOOST=/usr/local/boost \
 -DSYSCONFDIR=/etc \
+-DMYSQL_USER=mysql \
 -DMYSQL_UNIX_ADDR=/data/mysql/mysql.sock \
 -DWITH_INNOBASE_STORAGE_ENGINE=1 \
 -DWITH_ARCHIVE_STORAGE_ENGINE=1 \
@@ -44,7 +45,6 @@ yum install  zlib zlib-devel openssl openssl-devel readline-devel gcc gcc-c++ ma
 -DDEFAULT_COLLATION=utf8mb4_general_ci \
 -DENABLED_LOCAL_INFILE=1 \
 -DEXTRA_CHARSETS=all \
--DMYSQL_USER=mysql \
 -DWITH_DEBUG=0 \
 -DWITH_SSL=system \
 -DWITH_ZLIB=system
